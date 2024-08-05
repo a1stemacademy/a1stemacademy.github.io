@@ -1,9 +1,15 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
 
-    hamburger.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
+    hamburger.addEventListener('click', () => {
+        if (navLinks.classList.contains('show')) {
+            navLinks.classList.remove('show');
+            navLinks.style.maxHeight = '0'; // Collapse nav
+        } else {
+            navLinks.classList.add('show');
+            navLinks.style.maxHeight = navLinks.scrollHeight + 'px'; // Expand nav
+        }
     });
 
     // Fade in sections when the page loads
