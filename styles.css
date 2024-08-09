@@ -32,7 +32,7 @@ header {
     flex-direction: column;
     align-items: center;
     padding: 0 20px;
-    position: relative; /* Ensure proper positioning for hamburger menu */
+    text-align: center;
 }
 
 .logo {
@@ -75,14 +75,20 @@ nav ul li a:hover {
     display: none;
     font-size: 2rem;
     cursor: pointer;
-    margin-bottom: 10px;
+}
+
+/* Centering the contact-info and hamburger */
+.contact-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .contact-info {
-    margin-top: 10px;
     font-size: 1.2rem;
-    text-align: center; /* Center align contact info */
     font-weight: bold;
+    margin: 5px 0;
 }
 
 main {
@@ -150,22 +156,16 @@ footer .contact-info {
         align-items: center;
     }
 
-    .logo {
-        font-size: 1.8rem;
-        margin-bottom: 10px;
-    }
-
     .hamburger {
         display: block;
         font-size: 2rem;
         cursor: pointer;
         margin-bottom: 10px;
+        text-align: center;
     }
 
-    .contact-info {
-        margin-top: 10px;
-        font-size: 1rem;
-        text-align: center; /* Center align contact info in mobile view */
+    .contact-info-container {
+        align-items: center;
     }
 
     #nav-links {
@@ -184,7 +184,6 @@ footer .contact-info {
         flex-direction: column;
         padding: 0;
         margin: 0;
-        text-align: center; /* Center text in mobile view */
     }
 
     nav ul li {
@@ -194,5 +193,22 @@ footer .contact-info {
 
     nav ul li a {
         font-size: 1.2rem;
+    }
+}
+
+/* Center alignment for the contact-info and hamburger in the header */
+@media (min-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info-container {
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-info {
+        margin-top: 10px;
     }
 }
